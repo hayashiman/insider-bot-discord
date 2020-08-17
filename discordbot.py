@@ -5,11 +5,11 @@ from discord.ext import tasks
 import random
 import re
 import asyncio
+import os
 
-# 自分のBotのアクセストークンに置き換えてください
-TOKEN = 'NzIyMzgwNjYwOTMyODcwMTQ0.XuiSoQ.UoTgXlhWqe4Gqahrsb2MlkdzQHw'
-
-CHANNEL_ID = 722485884380774421
+#環境変数取得
+TOKEN = os.environ["MY_TOKEN"]
+CHANNEL_ID = os.environ["CHANNEL_ID"]
 
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
