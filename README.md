@@ -1,2 +1,2 @@
 # insider-bot-discord
-discordのbot作成
+discordのbot作成(実験)
