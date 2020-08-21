@@ -2,9 +2,9 @@
 import discord
 from discord.ext import commands
 from discord.ext import tasks
+import asyncio
 import random
 import re
-import asyncio
 import os
 
 #環境変数取得
@@ -22,6 +22,8 @@ answer = ''
 time_def = ''
 flag = 0
 
+
+print(TOKEN)
 
 # 起動時に動作する処理
 @client.event
