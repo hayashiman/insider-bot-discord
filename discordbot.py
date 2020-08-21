@@ -13,7 +13,6 @@ CHANNEL_ID = os.environ["CHANNEL_ID"]
 
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
-bot = commands.Bot(command_prefix='!')
 
 insider = ''
 master = ''
@@ -22,16 +21,6 @@ dm2 = ''
 answer = ''
 time_def = ''
 flag = 0
-
-@bot.event
-async def on_command_error(ctx, error):
-    orig_error = getattr(error, "original", error)
-    error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
-    await ctx.send(error_msg)
-
-@bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
 
 
 # 起動時に動作する処理
@@ -175,4 +164,3 @@ async def greet(channel):
 
 # Botの起動とDiscordサーバーへの接続
 client.run(TOKEN)
-bot.run(TOKEN)
