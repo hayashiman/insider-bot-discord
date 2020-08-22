@@ -163,6 +163,4 @@ def get_name(message):
 async def greet(channel):
 	await channel.send('よろしくお願いします。ゲームを開始する場合\"start\"と入力してください。')
 
-if __name__ == "__main__":
-	# Botの起動とDiscordサーバーへの接続
-	client.run(TOKEN)
+client.run(TOKEN)
